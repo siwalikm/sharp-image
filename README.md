@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# SharpImage Web Component (WIP) [[demo](https://css-sharp-image.vercel.app/)]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project includes a (framework agnostic) custom web component, `<sharp-image>`, which is defined in `src/sharp-image.js`. This component is used to display images with a "sharpening" effect using only css.
 
-Currently, two official plugins are available:
+## Usage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To use the `<sharp-image>` component, you first need to import it in your JavaScript or JSX file:
 
-## Expanding the ESLint configuration
+```jsx
+import './sharp-image.js'
+```
+Then, you can use the <sharp-image> tag in your JSX or HTML code:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```html
+<sharp-image src="path/to/image.jpg"></sharp-image>
+```
+### Attributes
+The <sharp-image> component supports the following attributes:
 
-- Configure the top-level `parserOptions` property like this:
+src: The source URL of the image.
+alt: The alternative text for the image.
+width: The width of the image.
+height: The height of the image.
+maxWidth: The maximum width of the image.
+maxHeight: The maximum height of the image.
+title: The title of the image.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+For example:
+
+```html
+<sharp-image src="path/to/image.jpg" alt="An example image" width="500" height="300"></sharp-image>
+```
+### Default Values
+If no values are provided for the attributes, the <sharp-image> component will use the following default values:
+
+```
+src: 'default-image.jpg'
+alt: 'default alt text'
+width: 'auto'
+height: 'auto'
+maxWidth: '100%'
+maxHeight: '100%'
+title: ''
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Styling
+The <sharp-image> component uses Shadow DOM, which means styles defined outside the component will not affect the component's internal styling. However, you can still style the component by defining styles inside the component itself.
+
+### Note
+This component uses a "fake" sharpening effect achieved through CSS. It does not actually modify the image data.
+
