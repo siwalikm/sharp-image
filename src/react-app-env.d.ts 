@@ -1,0 +1,7 @@
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'sharp-image': any; // specify the JSX.Element attributes type here, 'any' is used as an example
+    }
+  }
+}
