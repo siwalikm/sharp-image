@@ -26,8 +26,8 @@ export const App = () => {
 
   return (
     <>
-      <h2>DEMO - fake image sharpening </h2>
-      <h4>with web-component (css only)</h4>
+      <h2>Fake image sharpening with web components</h2>
+      <h2><a href="https://github.com/siwalikm/sharp-image/blob/main/README.md" target='_blank'>Github</a></h2>
 
       <div style={{
         display: 'flex',
