@@ -2,9 +2,11 @@ import './sharp-image.js'
 import { useState } from 'react'
 import React from 'react'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
-import example2 from './assets/images/default.jpg';
 import defaultVal from './assets/images/eg1.jpg';
 import example1 from './assets/images/eg2.jpg';
+import example2 from './assets/images/default.jpg';
+import example3 from './assets/images/eg3.jpg';
+import example4 from './assets/images/eg4.jpg';
 
 const checkImage = async (url) => {
   return new Promise((resolve, reject) => {
@@ -66,8 +68,8 @@ export const App = () => {
         }}>
         <img src={example1} alt="image 1" />
         <img src={example2} alt="image 2" />
-        <img src="https://cdn.hometogo.net/small/v1/ec9/5c7/10208de7bf034f29907d8849c7.jpg" alt="image 3" />
-        <img src="https://cdn.hometogo.net/small/v1/1ee/de6/47512a891f6a5444fddecd0433.jpg" alt="image 4" />
+        <img src={example3} alt="image 3" />
+        <img src={example4} alt="image 4" />
       </div>
 
     </>
