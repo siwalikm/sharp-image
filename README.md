@@ -16,7 +16,7 @@ Then, you can use the <sharp-image> tag in your JSX or HTML code:
 ```
 ### Attributes
 The <sharp-image> component supports the following attributes:
-
+```
 src: The source URL of the image.
 alt: The alternative text for the image.
 width: The width of the image.
@@ -24,7 +24,7 @@ height: The height of the image.
 maxWidth: The maximum width of the image.
 maxHeight: The maximum height of the image.
 title: The title of the image.
-
+```
 For example:
 
 ```html
